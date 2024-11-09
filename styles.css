@@ -1,0 +1,87 @@
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background-color: #101720;
+  font-family: "Space Grotesk", monospace;
+}
+
+h1 {
+  position: relative;
+  font-size: 64px;
+  padding: 0px 8px;
+}
+
+.pixel {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-radius: 4px;
+  animation: fall 5s linear infinite;
+}
+
+@keyframes fall {
+  0% {
+    transform: translateY(-100vh);
+  }
+  100% {
+    transform: translateY(100vh);
+  }
+}
+
+.animated-text{
+  color : #f5f5f5;
+}
+
+h1{
+  position: relative;
+  background: linear-gradient(90deg, #e945f7 0%, #ca6bff 50%, #8203e5 100%) text;
+  -webkit-text-fill-color: transparent;
+  animation: gradient 20s linear infinite;
+}
+
+h1::after{
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: calc(100% + 8px);
+  right: -8px;
+  background-color: #101720;
+  border-left: 4px solid #f5f5f5;
+  animation: cursor 0.7s infinite, typing 20s steps(14) infinite;
+}
+
+@keyframes cursor {
+  to{
+    border-left: 4px solid #f5f5f500;
+  }
+}
+
+@keyframes typing {
+  10%, 15%, 30%, 35%, 50%, 55%, 70%, 75%, 90%, 95% {
+    width: 0;
+  }
+  5%, 20%, 25%, 40%, 45%, 60%, 65%, 80%, 85%, 100% {
+    width: calc(100% + 8px);
+  }
+}
+
+@keyframes gradient {
+  0%, 20% {
+    background: linear-gradient(90deg, #833ab4 0%, #fd1d1d 50%, #FCB045 100%) text;
+  }
+  21%, 40%  {
+    background: linear-gradient(90deg, #0052D4 0%, #9CECFB 100%) text;
+  }
+  41%, 60%  {
+    background: linear-gradient(90deg, #FF512F 0%, #F09819 50%, #EDDE5D 100%) text;
+  }
+  61%, 80%  {
+    background: linear-gradient(90deg, #e945f7 0%, #833ab4 100%) text;
+  }
+  81%, 100%  {
+    background: linear-gradient(90deg, #00F260 0%, #0575E6 100%) text;
+  }
+}
