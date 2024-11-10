@@ -38,7 +38,7 @@ h1 {
 h1{
   position: relative;
   background: linear-gradient(90deg, #e945f7 0%, #ca6bff 50%, #8203e5 100%) text;
-  -webkit-text-fill-color: transparent;
+  color: transparent;
   animation: gradient 20s linear infinite;
 }
 
